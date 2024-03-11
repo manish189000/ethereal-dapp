@@ -1,5 +1,5 @@
-import logo from "../../assets/logo.svg";
-import connect from "../../assets/connect.svg";
+import logo from "../assets/logo.svg";
+import connect from "../assets/connect.svg";
 
 const DashboardHeader = () => {
   return (

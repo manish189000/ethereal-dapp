@@ -1,4 +1,4 @@
-import DashboardHeader from "../components/header/DashboardHeader";
+import DashboardHeader from "../components/DashboardHeader";
 
 const DashboardPage = () => {
   return <div></div>;
