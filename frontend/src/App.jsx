@@ -4,7 +4,7 @@ import NodePage from "./pages/NodePage";
 import WithdrawPage from "./pages/WithdrawPage";
 import HomePage from "./pages/HomePage";
 import Layout from "./Layout";
-
+import "./App.css";
 const App = () => {
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
