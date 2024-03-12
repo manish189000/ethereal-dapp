@@ -8,10 +8,13 @@ import Master from "../assets/Master.svg";
 import Obtuse from "../assets/Obtuse.svg";
 import Poly from "../assets/poly.svg";
 import Leftbg from "../assets/left-bg.svg";
+import UserBalance from "../components/UserBalance";
+
 
 const NodePage = () => {
   return (
     <>
+    <UserBalance />
       <div className="parent-part flex items-center gap-4">
         <div className="left-icon bg-[#fe1bf1] w-[5rem] h-[4rem] px-[0.7rem] py-[0.7rem]">
           <img src={Squareicon} alt="Square Icon" />
@@ -134,6 +137,4 @@ const NodePage = () => {
       </div>
     </>
   );
-};
-
 export default NodePage;

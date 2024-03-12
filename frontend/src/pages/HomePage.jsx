@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <>
-      <div>HomePage</div>
-
+      <div className="text-black">HomePage</div>
       <Link to={"/dashboard"}>
-        <button>Dashboard</button>
+        <button className="text-black border">Dashboard</button>
       </Link>
     </>
   );

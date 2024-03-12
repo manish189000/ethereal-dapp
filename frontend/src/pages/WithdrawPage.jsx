@@ -1,5 +1,10 @@
+import UserBalance from "../components/UserBalance";
 const WithdrawPage = () => {
-  return <div></div>;
+  return (
+    <>
+      <UserBalance />
+    </>
+  );
 };
 
 export default WithdrawPage;
