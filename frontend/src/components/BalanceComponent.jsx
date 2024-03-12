@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from "react";
 import polygon from "../assets/Polygon 1.svg";
 
 const Balance = ({ title, icon }) => {
   return (
     <div
-      className="threebox w-[30%] h-32 flex flex-col justify-between p-3 bg-black bg-opacity-25 z-10"
+      className="threebox w-[30%] h-32 flex flex-col justify-between p-3 bg-opacity-50 backdrop-blur-sm z-10"
       style={{
         border: "1px solid",
         borderImageSource:
