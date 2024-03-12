@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 
 const CustomComponent = ({
   borderImageSource,
@@ -40,11 +40,11 @@ const CustomComponent = ({
         <div className="real-text text-[white] pl-[1rem] font-lw">
           {realText}
         </div>
-        <div
+        <button
           className={`button-part w-[6rem] h-[2rem]  ml-[25rem] border-black border-2 ${buttonBgGradient} rounded-[2rem] text-[white] px-5 font-lw`}
         >
           {buttonText}
-        </div>
+        </button>
         <div className="three-dots  w-7 pl-[1rem] pt-1">
           <img src={threeDotsSrc} alt="" />
         </div>

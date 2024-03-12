@@ -11,6 +11,7 @@ export default {
         "rgba-11": "rgba(11, 255, 255, 1)",
         "rgba-254": "rgba(254, 27, 241, 1)",
         "rgba-009": "rgba(254, 27, 241,0.09)",
+        // "pur":""
       },
       fontFamily: {
         bakbak: ["Bakbak One", "sans-serif"],

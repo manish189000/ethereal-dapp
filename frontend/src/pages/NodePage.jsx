@@ -1,23 +1,24 @@
-import Squareicon from "../assets/Layer_x0020_1.svg";
-import SuareIcon2 from "../assets/Vector.svg";
+import nodez from "../assets/nodez.svg";
+// import SuareIcon2 from "../assets/Vector.svg";
 import Arrow from "../assets/Arrow.svg";
 import ThreeDots from "../assets/row01.svg";
 import CustomComponent from "./CustomComponent";
-import Triangle from "../assets/triangle.svg";
-import Master from "../assets/Master.svg";
-import Obtuse from "../assets/Obtuse.svg";
+import particle_node from "../assets/particle_node.svg";
+import master_node from "../assets/master_node.svg";
+import obtuse_node from "../assets/obtuse_node.svg";
+import canon_node from "../assets/canon_node.svg";
+
 import Poly from "../assets/poly.svg";
 import Leftbg from "../assets/left-bg.svg";
 import UserBalance from "../components/UserBalance";
 
-
 const NodePage = () => {
   return (
     <>
-    <UserBalance />
+      <UserBalance />
       <div className="parent-part flex items-center gap-4">
         <div className="left-icon bg-[#fe1bf1] w-[5rem] h-[4rem] px-[0.7rem] py-[0.7rem]">
-          <img src={Squareicon} alt="Square Icon" />
+          <img src={nodez} alt="Square Icon" />
         </div>
 
         <div className="right-part text-white w-[100%] bg-[#121212] ">
@@ -28,10 +29,9 @@ const NodePage = () => {
           </div>
         </div>
       </div>
-      //next-part
-      <div className="baground-image absolute left-3 -z-2 ">
+      {/* <div className="baground-image absolute left-3 -z-2 ">
         <img src={Poly} alt="" />
-      </div>
+      </div> */}
       <div
         className="child-part mt-10 h-[auto]px-6"
         style={{
@@ -48,7 +48,7 @@ const NodePage = () => {
 
         <CustomComponent
           borderImageSource="linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)"
-          leftPartIconSrc={SuareIcon2}
+          leftPartIconSrc={particle_node}
           rightPartIconText="Particle Nodes"
           zeroText="0"
           dollarZero="$ 0"
@@ -60,7 +60,7 @@ const NodePage = () => {
         />
         <CustomComponent
           borderImageSource="linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)"
-          leftPartIconSrc={Triangle}
+          leftPartIconSrc={canon_node}
           rightPartIconText="Canon Node"
           zeroText="0"
           dollarZero="$ 0"
@@ -72,7 +72,7 @@ const NodePage = () => {
         />
         <CustomComponent
           borderImageSource="linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)"
-          leftPartIconSrc={Obtuse}
+          leftPartIconSrc={obtuse_node}
           rightPartIconText="Obtuse Nodes"
           zeroText="0"
           dollarZero="$ 0"
@@ -84,8 +84,8 @@ const NodePage = () => {
         />
         <CustomComponent
           borderImageSource="linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)"
-          leftPartIconSrc={Master}
-          rightPartIconText=" Master Nodes"
+          leftPartIconSrc={master_node}
+          rightPartIconText="Master Nodes"
           zeroText="0"
           dollarZero="$ 0"
           arrowSrc={Arrow}
@@ -97,7 +97,7 @@ const NodePage = () => {
 
         <CustomComponent
           borderImageSource="linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)"
-          leftPartIconSrc={SuareIcon2}
+          leftPartIconSrc={particle_node}
           rightPartIconText="Executive Nodes"
           zeroText="0"
           dollarZero="$ 0"
@@ -109,7 +109,7 @@ const NodePage = () => {
         />
         <CustomComponent
           borderImageSource="linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)"
-          leftPartIconSrc={Triangle}
+          leftPartIconSrc={particle_node}
           rightPartIconText="Partner Nodes"
           zeroText="0"
           dollarZero="$ 0"
@@ -121,7 +121,7 @@ const NodePage = () => {
         />
         <CustomComponent
           borderImageSource="linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)"
-          leftPartIconSrc={SuareIcon2}
+          leftPartIconSrc={particle_node}
           rightPartIconText="Founder Nodes"
           zeroText="0"
           dollarZero="$ 0"
@@ -131,10 +131,11 @@ const NodePage = () => {
           buttonBgGradient="bg-gradient-to-r from-blue-400 to-purple-600"
           threeDotsSrc={ThreeDots}
         />
-        <div className="baground-image absolute  top-[10rem] w-[20rem] left-[76rem] ">
+        {/* <div className="baground-image absolute  top-[10rem] w-[20rem] left-[76rem] ">
           <img src={Leftbg} alt="" />
-        </div>
+        </div> */}
       </div>
     </>
   );
+};
 export default NodePage;
