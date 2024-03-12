@@ -1,27 +1,42 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import db_icon from "../assets/dbicon.svg";
 import node_icon from "../assets/nodeicon.svg";
 
 const Sidebar = () => {
   return (
     <div className="w-[15%] h-full bg-[#08090A] flex flex-col py-3">
-      <Link
-        to={"/dashboard"}
-        className="flex hover:bg-[#081112] focus:bg-[#081112] focus:opacity-100 items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+      <NavLink
+        to={"dashboard"}
+        className={({ isActive }) =>
+          isActive
+            ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
+            : "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+        }
+        end
       >
         <img src={db_icon} className="text-xl" />
         <span className="text-[#0BFFFF] font-lw">DASHBOARD</span>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to={"node"}
-        className="flex hover:bg-[#081112] focus:bg-[#081112] focus:opacity-100 items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+        className={({ isActive }) =>
+          isActive
+            ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
+            : "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+        }
+        end
       >
         <img src={node_icon} className="text-xl" />
         <span className="text-[#0BFFFF] font-lw">NODE</span>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to={"withdraw"}
-        className="flex hover:bg-[#081112] focus:bg-[#081112] focus:opacity-100 items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+        className={({ isActive }) =>
+          isActive
+            ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
+            : "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+        }
+        end
       >
         <svg
           width="32"
@@ -73,9 +88,10 @@ const Sidebar = () => {
         </svg>
 
         <span className="text-[#0BFFFF] font-lw">WITHDRAW</span>
-      </Link>
+      </NavLink>
     </div>
   );
 };
 
 export default Sidebar;
+// focus:bg-[#081112] focus:opacity-100

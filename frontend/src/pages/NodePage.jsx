@@ -1,5 +1,7 @@
+import UserBalance from "../components/UserBalance";
+
 const NodePage = () => {
-  return <></>;
+  return <UserBalance />;
 };
 
 export default NodePage;
