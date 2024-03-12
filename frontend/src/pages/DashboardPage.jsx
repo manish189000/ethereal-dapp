@@ -60,7 +60,7 @@ const DashboardPage = () => {
                 <NodeName img={particle_node} nodeName={"Founder Node"} />
               </div>
             </div>
-</div>
+          </div>
         </div>
         <div className="w-[65%] ">
           <div className="flex h-16 gap-2 w-full">
@@ -155,11 +155,18 @@ const DashboardPage = () => {
       juij
        */}
 
-      <div className="detailContainer w-full h-[400px] bg-slate-500 mt-2 flex">
-        <div className="leftpart w-[60%] bg-lime-700 ">
-          
+      <div className="detailContainer w-full h-[400px] mt-2 flex">
+        <div className="leftpart w-[60%] border-r-2 border-[#2E2E2E4F] bg-slate-400 ">
+          <div className="iinnerpart">
+            <div className="box">
+              <div className="name">
+                <img src="" alt="" />
+                
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="rightPart w-[40%] bg-yellow-600 "></div>
+        <div className="rightPart w-[40%]"></div>
       </div>
     </div>
   );
