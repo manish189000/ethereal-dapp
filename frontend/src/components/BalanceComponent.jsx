@@ -14,7 +14,7 @@ const Balance = ({ title, icon }) => {
     >
       <div className="uppContainer flex justify-between">
         <div className="availableBal text-sm font-lw">{title}</div>
-        <button className="flex gap-1 items-center font-lw bg-gradient-to-r from-rgba-254 to-rgba-11  py-1 px-2 rounded-2xl text-xs font-bold">
+        <button className="flex gap-1 items-center font-lw bg-gradient-to-r from-blue-400 to-purple-600  py-1 px-2 rounded-2xl text-xs font-bold">
           $USDT <img src={polygon} />
         </button>
       </div>
