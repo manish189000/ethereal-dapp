@@ -12,7 +12,7 @@ const App = () => {
       path: "/dashboard",
       element: <Layout />,
       children: [
-        { index: true, element: <DashboardPage /> },
+        { path: "dashboard", element: <DashboardPage /> },
         { path: "node", element: <NodePage /> },
         { path: "withdraw", element: <WithdrawPage /> },
       ],
