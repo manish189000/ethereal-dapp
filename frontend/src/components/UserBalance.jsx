@@ -2,7 +2,7 @@ import icon1 from "../assets/Group 48095668.svg";
 import icon2 from "../assets/Group 48095669.svg";
 import icon3 from "../assets/Group 48095670.svg";
 import bgsvg from "../assets/bgSvg.svg";
-import Balance from "./BalanceComponent";
+import Balance from "./Balance";
 
 const UserBalance = () => {
   return (
