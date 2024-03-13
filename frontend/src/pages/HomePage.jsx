@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <>
       <div className="text-black">HomePage</div>
-      <Link to={"/dashboard"}>
+      <Link to={"/dashboard/dashboard"}>
         <button className="text-black border">Dashboard</button>
       </Link>
     </>

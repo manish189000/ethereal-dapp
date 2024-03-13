@@ -1,5 +1,7 @@
 import UserBalance from "../components/UserBalance";
 import withdraw_icon from "../assets/withdraw_icon.svg";
+import WithdrawStatement from "../components/WithdrawStatement";
+import { nodeObject } from "./DashboardPage";
 
 const WithdrawPage = () => {
   return (
@@ -38,8 +40,18 @@ const WithdrawPage = () => {
             "linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)",
           borderImageSlice: 1,
         }}
-        className=" mt-14 h-16"
-      ></div>
+        className=" mt-14 px-14 py-8"
+      >
+        {nodeObject.map((item) => {
+          return (
+            <WithdrawStatement
+              key={Math.random()}
+              nodeImage={item.nodeImage}
+              nodeName={item.nodeName}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
