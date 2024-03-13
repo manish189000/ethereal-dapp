@@ -143,7 +143,7 @@ import React from "react";
 import UserBalance from "../components/UserBalance";
 import nodez from "../assets/nodez.svg";
 import NodeStatement from "../components/NodeStatement";
-import { nodeObject } from "./DashboardPage";
+import { nodeObject } from "../util/data";
 
 const NodePage = () => {
   return (
