@@ -5,7 +5,7 @@ import { IoLogOutOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   return (
-    <div className="w-[15%] h-full bg-[#08090A] flex flex-col justify-between py-3">
+    <div className="w-[15%] z-50 h-full bg-[#08090A] flex flex-col justify-between py-3">
       <div className="w-full flex flex-col ">
         <NavLink
           to={"dashboard"}
