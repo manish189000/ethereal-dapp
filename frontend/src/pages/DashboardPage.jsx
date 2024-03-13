@@ -25,7 +25,6 @@ const DashboardPage = () => {
             <img src={nodez} alt="nodez" className="bg-rgba-254 p-2" />
             <div
               style={{
-                backgroundColor: "blue",
                 float: "left",
                 webkitClipPath: "polygon(0% 0%, 75% 0%, 100% 50%, 0% 100%)",
                 clipPath: "polygon(92% 0, 100% 35%, 100% 100%, 0 100%, 0 0)",
@@ -75,7 +74,6 @@ const DashboardPage = () => {
             <img src={clock} alt="clock" className="bg-rgba-254 py-2 px-3" />
             <div
               style={{
-                backgroundColor: "blue",
                 float: "left",
                 webkitClipPath: "polygon(0% 0%, 75% 0%, 100% 50%, 0% 100%)",
                 clipPath: "polygon(96% 0, 100% 35%, 100% 100%, 0 100%, 0 0)",
@@ -168,7 +166,6 @@ const DashboardPage = () => {
             <div className="box">
               <div className="name">
                 <img src="" alt="" />
-                
               </div>
             </div>
           </div>
