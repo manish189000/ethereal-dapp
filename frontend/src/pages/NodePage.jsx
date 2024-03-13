@@ -148,6 +148,8 @@ import { nodeObject } from "../util/data";
 const NodePage = () => {
   return (
     <>
+      
+    
       <UserBalance />
       <div className="nodeContainer">
         <div className="inSection1 mt-14 flex h-16 gap-3 w-full">
@@ -185,6 +187,8 @@ const NodePage = () => {
       sdfg
       dghryt
       dth */}
+
+       
       <div
         style={{
           border: "1px solid",
@@ -193,7 +197,11 @@ const NodePage = () => {
           borderImageSlice: 1,
         }}
         className=" mt-4 px-14 py-8"
-      >
+      >  
+         <div className="text-item flex  w-[100%] ">
+          <div className="name-text text-[#292D32] w-[20%] text-center font-lw font-[700] ">Name</div>
+           <div className="miningtext text-[#292D32] w-[45%] text-center font-lw font-[700]">Mining Rate</div>
+          </div>
         {nodeObject.map((item) => {
           return (
             <NodeStatement

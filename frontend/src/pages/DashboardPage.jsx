@@ -2,14 +2,11 @@ import UserBalance from "../components/UserBalance";
 import nodez from "../assets/nodez.svg";
 import portfolio from "../assets/portfolio.png";
 import clock from "../assets/clock.svg";
-import particle_node from "../assets/particle_node.svg";
-import master_node from "../assets/master_node.svg";
 import arrow from "../assets/Arrow.svg";
-import obtuse_node from "../assets/obtuse_node.svg";
-import canon_node from "../assets/canon_node.svg";
 import NodeName from "../components/NodeName";
 import { nodeObject } from "../util/data";
 import DashboardStatement from "../components/DashboardStatement";
+import CandlestickChart from "../components/Candlestickchart";
 
 const DashboardPage = () => {
   return (
@@ -53,14 +50,23 @@ const DashboardPage = () => {
               >
                 Create New Node
               </button>
-              <div className="flex flex-col gap-2 mx-6 my-4">
-                <NodeName img={particle_node} nodeName={"Particle Nodes"} />
+              <div className="flex flex-col gap-3 mx-6 my-3">
+                {/* <NodeName img={particle_node} nodeName={"Particle Nodes"} />
                 <NodeName img={canon_node} nodeName={"Canon Node"} />
                 <NodeName img={obtuse_node} nodeName={"Obtuse Node"} />
                 <NodeName img={master_node} nodeName={"Master Node"} />
                 <NodeName img={particle_node} nodeName={"Executive Node"} />
                 <NodeName img={canon_node} nodeName={"Partner Node"} />
-                <NodeName img={particle_node} nodeName={"Founder Node"} />
+                <NodeName img={particle_node} nodeName={"Founder Node"} /> */}
+                {nodeObject.map((item) => {
+                  return (
+                    <NodeName
+                      key={Math.random()}
+                      img={item.nodeImage}
+                      nodeName={item.nodeName}
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -91,9 +97,12 @@ const DashboardPage = () => {
               </div>
             </div>
           </div>
+          <div className="w-full ">
+            <CandlestickChart />
+          </div>
         </div>
       </div>
-      <div className="w-[70%] "></div>
+
       <div className="portfolio">
         <div className="inSection1 mt-14 flex h-16 gap-3 w-full">
           <img src={portfolio} alt="nodez" className="bg-rgba-254 py-2 px-3" />
@@ -138,6 +147,7 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
+      {/* <CandlestickChart /> */}
       <div
         style={{
           border: "1px solid",
@@ -148,14 +158,15 @@ const DashboardPage = () => {
         className="detailContainer w-full mt-2 flex"
       >
         <div
-          // style={{
-          //   border: "1px solid",
-          //   borderImageSource:
-          //     "linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)",
-          //   borderImageSlice: 1,
-          // }}
           className="leftpart w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8"
         >
+           <div className="text-item flex  w-[100%] ">
+            <div className="name-text text-[#292D32] w-[20%] text-center font-lw font-[700] ">Name</div>
+            <div className="name-text text-[#292D32] w-[18%] text-center font-lw font-[700] ">Asset</div>
+           <div className="name-text text-[#292D32] w-[10%] text-center font-lw font-[700] ">Mining Rate 24h</div>
+
+           <div className="miningtext text-[#292D32] w-[18%] text-center font-lw font-[700]">Earnings</div>
+          </div>
           {nodeObject.map((item) => {
             return (
               <DashboardStatement

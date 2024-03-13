@@ -19,6 +19,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         openSans: ["Open Sans", "sans-serif"],
         lw: ["Leelawadee UI Bold"],
+        // lw: ["Inter", "sans-serif"],
       },
     },
   },
