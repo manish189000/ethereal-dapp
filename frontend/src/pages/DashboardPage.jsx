@@ -157,7 +157,16 @@ const DashboardPage = () => {
         }}
         className="detailContainer w-full mt-2 flex"
       >
-        <div className="leftpart w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8">
+        <div
+          className="leftpart w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8"
+        >
+           <div className="text-item flex  w-[100%] ">
+            <div className="name-text text-[#292D32] w-[20%] text-center font-lw font-[700] ">Name</div>
+            <div className="name-text text-[#292D32] w-[18%] text-center font-lw font-[700] ">Asset</div>
+           <div className="name-text text-[#292D32] w-[10%] text-center font-lw font-[700] ">Mining Rate 24h</div>
+
+           <div className="miningtext text-[#292D32] w-[18%] text-center font-lw font-[700]">Earnings</div>
+          </div>
           {nodeObject.map((item) => {
             return (
               <DashboardStatement

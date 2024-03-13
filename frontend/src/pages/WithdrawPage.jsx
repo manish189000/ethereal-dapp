@@ -42,6 +42,10 @@ const WithdrawPage = () => {
         }}
         className=" mt-14 px-14 py-8"
       >
+          <div className="text-item flex  w-[100%] ">
+          <div className="name-text text-[#292D32] w-[20%] text-center font-lw font-[700] ">Name</div>
+           <div className="miningtext text-[#292D32] w-[35%] text-center font-lw font-[700]">Earnings</div>
+          </div>
         {nodeObject.map((item) => {
           return (
             <WithdrawStatement
