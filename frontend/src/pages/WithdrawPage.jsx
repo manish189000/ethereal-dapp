@@ -1,7 +1,7 @@
 import UserBalance from "../components/UserBalance";
 import withdraw_icon from "../assets/withdraw_icon.svg";
 import WithdrawStatement from "../components/WithdrawStatement";
-import { nodeObject } from "./DashboardPage";
+import { nodeObject } from "../util/data";
 
 const WithdrawPage = () => {
   return (
