@@ -94,4 +94,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-// focus:bg-[#081112] focus:opacity-100
