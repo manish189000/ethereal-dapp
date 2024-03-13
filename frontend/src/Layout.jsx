@@ -18,7 +18,7 @@ const Layout = () => {
         src={cube}
         className="cubeContainer absolute bottom-[-35%] right-[40%]"
       />
-      0{" "}
+      
     </div>
   );
 };
