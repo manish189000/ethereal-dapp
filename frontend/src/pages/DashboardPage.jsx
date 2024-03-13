@@ -8,6 +8,14 @@ import obtuse_node from "../assets/obtuse_node.svg";
 import canon_node from "../assets/canon_node.svg";
 import NodeName from "../components/NodeName";
 const DashboardPage = () => {
+  // <NodeName img={particle_node} nodeName={"Particle Nodes"} />
+  // <NodeName img={canon_node} nodeName={"Canon Node"} />
+  // <NodeName img={obtuse_node} nodeName={"Obtuse Node"} />
+  // <NodeName img={master_node} nodeName={"Master Node"} />
+  // <NodeName img={particle_node} nodeName={"Executive Node"} />
+  // <NodeName img={canon_node} nodeName={"Partner Node"} />
+  // <NodeName img={particle_node} nodeName={"Founder Node"} />
+
   return (
     <div>
       <UserBalance />
@@ -154,7 +162,6 @@ const DashboardPage = () => {
       jhyty
       juij
        */}
-
       <div className="detailContainer w-full h-[400px] mt-2 flex">
         <div className="leftpart w-[60%] border-r-2 border-[#2E2E2E4F] bg-slate-400 ">
           <div className="iinnerpart">
@@ -173,3 +180,13 @@ const DashboardPage = () => {
 };
 
 export default DashboardPage;
+
+export const nodeObject = [
+  { nodeImage: particle_node, nodeName: "Particle Nodes" },
+  { nodeImage: canon_node, nodeName: "Canon Node" },
+  { nodeImage: obtuse_node, nodeName: "Obtuse Node" },
+  { nodeImage: master_node, nodeName: "Master Node" },
+  { nodeImage: particle_node, nodeName: "Executive Node" },
+  { nodeImage: canon_node, nodeName: "Partner Node" },
+  { nodeImage: particle_node, nodeName: "Founder Node" },
+];

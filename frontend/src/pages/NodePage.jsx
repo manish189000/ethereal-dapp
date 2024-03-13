@@ -16,7 +16,7 @@ const NodePage = () => {
   return (
     <>
       <UserBalance />
-      <div className="parent-part flex items-center gap-4">
+      <div className="parent-part mt-14 flex items-center gap-4">
         <div className="left-icon bg-[#fe1bf1] w-[5rem] h-[4rem] px-[0.7rem] py-[0.7rem]">
           <img src={nodez} alt="Square Icon" />
         </div>
@@ -33,7 +33,7 @@ const NodePage = () => {
         <img src={Poly} alt="" />
       </div> */}
       <div
-        className="child-part mt-10 h-[auto]px-6"
+        className="child-part mt-14 h-[auto]px-6"
         style={{
           border: "1px solid",
           borderImageSource:
