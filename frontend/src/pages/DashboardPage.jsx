@@ -162,10 +162,18 @@ const DashboardPage = () => {
       jhyty
       juij
        */}
-
-      <div className="detailContainer w-full h-[400px] bg-slate-500 mt-2 flex">
-        <div className="leftpart w-[60%] bg-lime-700 "></div>
-        <div className="rightPart w-[40%] bg-yellow-600 "></div>
+      <div className="detailContainer w-full h-[400px] mt-2 flex">
+        <div className="leftpart w-[60%] border-r-2 border-[#2E2E2E4F] bg-slate-400 ">
+          <div className="iinnerpart">
+            <div className="box">
+              <div className="name">
+                <img src="" alt="" />
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="rightPart w-[40%]"></div>
       </div>
     </div>
   );
