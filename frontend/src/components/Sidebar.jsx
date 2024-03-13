@@ -4,7 +4,7 @@ import node_icon from "../assets/nodeicon.svg";
 
 const Sidebar = () => {
   return (
-    <div className="w-[15%] h-full bg-[#08090A] flex flex-col py-3">
+    <div className="w-[15%] h-full bg-[#08090A] flex flex-col py-3 z-50">
       <NavLink
         to={"dashboard"}
         className={({ isActive }) =>
