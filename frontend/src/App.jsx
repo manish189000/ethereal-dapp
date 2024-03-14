@@ -7,7 +7,8 @@ import Layout from "./Layout";
 import "./App.css";
 import AdminPage from "./pages/AdminPage";
 import ApproveWithdrawalPage from "./pages/ApproveWithdrawalPage";
-import NodezConfigPage from "./pages/NodezConfigPage";
+import NodezPage from "./pages/NodezPage";
+import ConfigPage from "./pages/ConfigPage";
 const App = () => {
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
@@ -19,7 +20,8 @@ const App = () => {
         { path: "node", element: <NodePage /> },
         { path: "withdraw", element: <WithdrawPage /> },
         { path: "admin", element: <AdminPage /> },
-        { path: "nodez-config", element: <NodezConfigPage /> },
+        { path: "nodez", element: <NodezPage /> },
+        { path: "config", element: <ConfigPage /> },
         { path: "approve-withdrawal", element: <ApproveWithdrawalPage /> },
       ],
     },

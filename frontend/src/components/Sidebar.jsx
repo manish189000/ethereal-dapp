@@ -26,7 +26,19 @@ const Sidebar = () => {
             <span className="text-[#0BFFFF] font-lw">ADMIN</span>
           </NavLink>
           <NavLink
-            to={"nodez-config"}
+            to={"nodez"}
+            className={({ isActive }) =>
+              isActive
+                ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
+                : "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+            }
+            end
+          >
+            <img src={node_icon} className="text-xl" />
+            <span className="text-[#0BFFFF] font-lw">NODEZ </span>
+          </NavLink>
+          <NavLink
+            to={"config"}
             className={({ isActive }) =>
               isActive
                 ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
@@ -35,7 +47,7 @@ const Sidebar = () => {
             end
           >
             <IoSettings className=" text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
-            <span className="text-[#0BFFFF] font-lw">NODEZ CONFIG</span>
+            <span className="text-[#0BFFFF] font-lw">CONFIG</span>
           </NavLink>
           <NavLink
             to={"approve-withdrawal"}

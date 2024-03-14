@@ -2,7 +2,9 @@
 import { NavLink } from "react-router-dom";
 import db_icon from "../assets/dbicon.svg";
 import node_icon from "../assets/nodeicon.svg";
-import { IoLogOutOutline } from "react-icons/io5";
+import { IoLogOutOutline, IoSettings } from "react-icons/io5";
+import { FaMoneyBill } from "react-icons/fa";
+import { RiAdminFill } from "react-icons/ri";
 
 const ResponsiveSidebar = ({ showNavbar, setShowNavbar }) => {
   return (
@@ -12,6 +14,42 @@ const ResponsiveSidebar = ({ showNavbar, setShowNavbar }) => {
           onClick={() => setShowNavbar(!showNavbar)}
           className="innercontainer w-full bg-black absolute z-[1000]"
         >
+          <NavLink
+            to={"admin"}
+            className={({ isActive }) =>
+              isActive
+                ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
+                : "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+            }
+            end
+          >
+            <RiAdminFill className=" text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
+            <span className="text-[#0BFFFF] font-lw">ADMIN</span>
+          </NavLink>
+          <NavLink
+            to={"nodez-config"}
+            className={({ isActive }) =>
+              isActive
+                ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
+                : "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+            }
+            end
+          >
+            <IoSettings className=" text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
+            <span className="text-[#0BFFFF] font-lw">NODEZ CONFIG</span>
+          </NavLink>
+          <NavLink
+            to={"approve-withdrawal"}
+            className={({ isActive }) =>
+              isActive
+                ? "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-100 bg-[#081112]"
+                : "flex items-center justify-start px-4 py-3 my-1 gap-3 opacity-30"
+            }
+            end
+          >
+            <FaMoneyBill className=" text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
+            <span className="text-[#0BFFFF] font-lw">APPROVE WITHDRAWAL</span>
+          </NavLink>
           <NavLink
             to={"dashboard"}
             className={({ isActive }) =>
