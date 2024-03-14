@@ -49,7 +49,7 @@ class CandlestickChart extends React.Component {
 
       series: [
         {
-          data: this.generateData(80), // Generating 10 random data points initially
+          data: this.generateData(70), // Generating 10 random data points initially
         },
       ],
     };
