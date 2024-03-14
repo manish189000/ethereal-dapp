@@ -7,7 +7,7 @@ import marketgraph from "../assets/marketgraph.svg";
 
 const DashboardStatement = ({ nodeImage, nodeName }) => {
   return (
-    <div className="px-4 py-4 my-3 w-full bg-black border-2 overflow-x-scroll no-scrollbar border-gray-900 flex justify-between items-center">
+    <div className="px-4 py-4 my-3 w-full bg-black min-w-[766px] border-2 border-gray-900 flex justify-between items-center">
       <div className="flex items-center gap-2 w-[20%]">
         <img src={nodeImage} className="w-8" />
         <p className=" font-lw text-sm">{nodeName}</p>

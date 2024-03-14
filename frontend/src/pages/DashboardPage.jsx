@@ -165,7 +165,7 @@ const DashboardPage = () => {
         }}
         className="detailContainer w-full mt-2 flex"
       >
-        <div className="leftpart backdrop-blur-sm bg-black w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8">
+        <div className="leftpart backdrop-blur-sm bg-black w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8 overflow-x-scroll">
           <div className="text-item flex w-[100%] ">
             <div className="name-text text-[#292D32] w-[20%] text-center text-[12px] font-lw font-[700] ">
               Name
