@@ -37,14 +37,22 @@ const DashboardPage = () => {
               </div>
             </div>
           </div>
-          <div className="mt-2 w-full border px-3 py-4 flex">
-            <div className="w-[50%] mt-4">
+          <div
+            style={{
+              border: "1px solid",
+              borderImageSource:
+                "linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)",
+              borderImageSlice: 1,
+            }}
+            className="mt-2 w-full border px-3 bg-black py-4 flex"
+          >
+            <div className="w-[30%] mt-4">
               <p className=" font-poppins text-sm font-semibold text-[#292D32]">
                 Total Nodez
               </p>
               <p className=" font-lw text-3xl">0 REAL</p>
             </div>
-            <div>
+            <div className="flex w-[70%] flex-col items-center">
               <button
                 className={`button-part px-4 py-2 text-sm font-semibold border-black border-2 bg-gradient-to-r from-blue-400 to-purple-600 rounded-[2rem] text-[white] font-poppins`}
               >
@@ -157,15 +165,21 @@ const DashboardPage = () => {
         }}
         className="detailContainer w-full mt-2 flex"
       >
-        <div
-          className="leftpart w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8"
-        >
-           <div className="text-item flex  w-[100%] ">
-            <div className="name-text text-[#292D32] w-[20%] text-center font-lw font-[700] ">Name</div>
-            <div className="name-text text-[#292D32] w-[18%] text-center font-lw font-[700] ">Asset</div>
-           <div className="name-text text-[#292D32] w-[10%] text-center font-lw font-[700] ">Mining Rate 24h</div>
+        <div className="leftpart backdrop-blur-sm bg-black w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8">
+          <div className="text-item flex w-[100%] ">
+            <div className="name-text text-[#292D32] w-[20%] text-center text-[12px] font-lw font-[700] ">
+              Name
+            </div>
+            <div className="name-text text-[#292D32] w-[18%] text-center text-[12px] font-lw font-[700] ">
+              Asset
+            </div>
+            <div className="name-text text-[#292D32] w-[10%] text-center text-[12px] font-lw font-[700] ">
+              Mining Rate
+            </div>
 
-           <div className="miningtext text-[#292D32] w-[18%] text-center font-lw font-[700]">Earnings</div>
+            <div className="miningtext text-[#292D32] w-[18%] text-center text-[12px] font-lw font-[700]">
+              Earnings
+            </div>
           </div>
           {nodeObject.map((item) => {
             return (
@@ -179,11 +193,14 @@ const DashboardPage = () => {
         </div>
         <div className="rightPart w-[25%] py-8">
           <div className="w-full flex items-center justify-center flex-col">
+            <p className=" font-lw text-[#292D32] text-[12px] text-start">
+              Name:
+            </p>
             {nodeObject.map((item) => {
               return (
                 <div
                   key={Math.random()}
-                  className="w-[90%] px-2 py-3 my-2 flex items-center gap-4 border-2 border-[#0E0E0E]"
+                  className="w-[90%] bg-black px-2 py-3 my-2 flex items-center gap-4 border-2 border-[#0E0E0E]"
                 >
                   <img src={item.nodeImage} className="w-7" />
                   <p className=" font-lw text-sm">{item.nodeName}</p>
