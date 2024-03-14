@@ -1,15 +1,17 @@
-import React from "react";
-import { RiMenu2Line } from "react-icons/ri";
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 import db_icon from "../assets/dbicon.svg";
 import node_icon from "../assets/nodeicon.svg";
 import { IoLogOutOutline } from "react-icons/io5";
 
-const ResponsiveSidebar = ({ showNavbar }) => {
+const ResponsiveSidebar = ({ showNavbar, setShowNavbar }) => {
   return (
     showNavbar && (
       <div className="responsiveContainer ">
-        <div className="innercontainer w-full bg-black absolute z-[1000]">
+        <div
+          onClick={() => setShowNavbar(!showNavbar)}
+          className="innercontainer w-full bg-black absolute z-[1000]"
+        >
           <NavLink
             to={"dashboard"}
             className={({ isActive }) =>
@@ -93,6 +95,10 @@ const ResponsiveSidebar = ({ showNavbar }) => {
             </svg>
             <span className="text-[#0BFFFF] font-lw">WITHDRAW</span>
           </NavLink>
+          <div className="flex items-center justify-start px-4 py-3 my-1 ml-2 gap-3 opacity-30 hover:opacity-100 ">
+            <IoLogOutOutline className=" text-2xl text-[#0BFFFF]" />
+            <p className=" text-[#0BFFFF] font-lw">LOGOUT</p>
+          </div>
         </div>
       </div>
     )

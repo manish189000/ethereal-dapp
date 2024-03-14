@@ -14,9 +14,12 @@ const Layout = () => {
       <div className="w-full z-[1000] relative flex xl:block h-[88%] sm:h-[90%]">
         <Sidebar />
         <div className=" hidden xl:block text-2xl px-16 air:px-4 py-4 h-[10%]">
-         <RiMenu2Line onClick={() => setShowNavbar(!showNavbar)} />
+          <RiMenu2Line onClick={() => setShowNavbar(!showNavbar)} />
         </div>
-        <ResponsiveSidebar showNavbar={showNavbar} />
+        <ResponsiveSidebar
+          showNavbar={showNavbar}
+          setShowNavbar={setShowNavbar}
+        />
         <div className="w-[85%] xl:w-full xl:h-[90%] h-full overflow-y-scroll px-16 air:px-4 pt-24 pb-6 xl:pt-0 no-scrollbar">
           <Outlet />
         </div>
