@@ -13,7 +13,7 @@ const Layout = () => {
         <div className=" hidden xl:block text-2xl px-16 py-4">
           <RiMenu2Line />
         </div>
-        <div className="w-[85%] xl:w-full h-full overflow-y-scroll px-16 py-6 no-scrollbar">
+        <div className="w-[85%] xl:w-full h-full overflow-y-scroll px-16 py-6 xl:pt-0 no-scrollbar">
           <Outlet />
         </div>
       </div>
