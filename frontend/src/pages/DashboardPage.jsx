@@ -12,8 +12,8 @@ const DashboardPage = () => {
   return (
     <div>
       <UserBalance />
-      <div className="mt-14 flex justify-between gap-4 w-full">
-        <div className="flex flex-col w-[30%]">
+      <div className=" mt-32 air:mt-20 flex air:flex-col justify-between gap-4 w-full">
+        <div className="flex flex-col w-[30%] air:w-full">
           <div className=" flex h-16 gap-2 w-full">
             <img src={nodez} alt="nodez" className="bg-rgba-254 p-2" />
             <div
@@ -59,13 +59,6 @@ const DashboardPage = () => {
                 Create New Node
               </button>
               <div className="flex flex-col gap-3 mx-6 my-3">
-                {/* <NodeName img={particle_node} nodeName={"Particle Nodes"} />
-                <NodeName img={canon_node} nodeName={"Canon Node"} />
-                <NodeName img={obtuse_node} nodeName={"Obtuse Node"} />
-                <NodeName img={master_node} nodeName={"Master Node"} />
-                <NodeName img={particle_node} nodeName={"Executive Node"} />
-                <NodeName img={canon_node} nodeName={"Partner Node"} />
-                <NodeName img={particle_node} nodeName={"Founder Node"} /> */}
                 {nodeObject.map((item) => {
                   return (
                     <NodeName
@@ -79,7 +72,7 @@ const DashboardPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-[65%] ">
+        <div className="w-[65%] air:w-full ">
           <div className="flex h-16 gap-2 w-full">
             <img src={clock} alt="clock" className="bg-rgba-254 py-2 px-3" />
             <div
@@ -165,8 +158,8 @@ const DashboardPage = () => {
         }}
         className="detailContainer w-full mt-2 flex"
       >
-        <div className="leftpart backdrop-blur-sm bg-black w-[75%] border-r-2 border-[#0E0E0E] px-14 py-8">
-          <div className="text-item flex w-[100%] ">
+        <div className="leftpart backdrop-blur-sm  w-[75%] sm:w-full border-r-2 border-[#0E0E0E] px-14 air:px-6 py-8">
+          {/* <div className="text-item flex w-[100%] min-w-[766px] ">
             <div className="name-text text-[#292D32] w-[20%] text-center text-[12px] font-lw font-[700] ">
               Name
             </div>
@@ -180,8 +173,23 @@ const DashboardPage = () => {
             <div className="miningtext text-[#292D32] w-[18%] text-center text-[12px] font-lw font-[700]">
               Earnings
             </div>
-          </div>
-          <div className=" py-4 w-full overflow-x-scroll">
+          </div> */}
+          <div className=" py-4 w-full overflow-x-scroll custom-scrollbar">
+            <div className="text-item flex w-[100%] min-w-[766px] ">
+              <div className="name-text text-[#292D32] w-[20%] text-center text-[12px] font-lw font-[700] ">
+                Name
+              </div>
+              <div className="name-text text-[#292D32] w-[18%] text-center text-[12px] font-lw font-[700] ">
+                Asset
+              </div>
+              <div className="name-text text-[#292D32] w-[10%] text-center text-[12px] font-lw font-[700] ">
+                Mining Rate
+              </div>
+
+              <div className="miningtext text-[#292D32] w-[18%] text-center text-[12px] font-lw font-[700]">
+                Earnings
+              </div>
+            </div>
             {nodeObject.map((item) => {
               return (
                 <DashboardStatement
@@ -193,8 +201,8 @@ const DashboardPage = () => {
             })}
           </div>
         </div>
-        <div className="rightPart w-[25%] py-8">
-          <div className="w-full flex items-center justify-center flex-col">
+        <div className="rightPart w-[25%] xl:w-[30%] py-8 sm:hidden">
+          <div className="w-full flex items-center py-4 justify-center flex-col">
             <p className=" font-lw text-[#292D32] text-[12px] text-start">
               Name:
             </p>
@@ -216,13 +224,15 @@ const DashboardPage = () => {
                   "linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)",
                 borderImageSlice: 1,
               }}
-              className="flex w-[90%] border-2 p-2 my-2 items-center justify-between"
+              className="flex lg2:flex-col lg2:gap-3 w-[90%] border-2 p-2 my-2 items-center justify-between"
             >
-              <p className=" font-lw text-[14px]">$3000</p>
-              <img src={arrow} className="w-4" />
-              <p className=" font-lw text-[14px]">REAL</p>
+              <div className="flex gap-3">
+                <p className=" font-lw text-[14px]">$3000</p>
+                <img src={arrow} className="w-4" />
+                <p className=" font-lw text-[14px]">REAL</p>
+              </div>
               <button
-                className={`button-part px-4 py-2 text-[12px] font-semibold border-black border-2 bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-500  rounded-[2rem] text-[white] font-poppins`}
+                className={`button-part px-4 py-2 text-[12px] lg2:w-full font-semibold border-black border-2 bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-500  rounded-[2rem] text-[white] font-poppins`}
               >
                 Activate Node
               </button>

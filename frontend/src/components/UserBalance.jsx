@@ -6,9 +6,9 @@ import Balance from "./BalanceComponent";
 
 const UserBalance = () => {
   return (
-    <div className="mainContainer w-full h-52 flex items-center justify-between relative ">
-      <img src={bgsvg} className="absolute z-0 w-[120%]" />
-      <div className="paddingContainer  w-full h-52 flex items-center justify-between px-8">
+    <div className="mainContainer w-full flex items-center justify-between relative ">
+      <img src={bgsvg} className="absolute z-0 w-[120%] air:hidden" />
+      <div className="paddingContainer w-full flex air:flex-col air:gap-3 items-center justify-between px-8 air:px-0">
         <Balance title="AVAILABLE BALANCE" icon={icon1} />
         <Balance title="TOTAL EARNINGS" icon={icon2} />
         <Balance title="DAILY MINING RATE" icon={icon3} />

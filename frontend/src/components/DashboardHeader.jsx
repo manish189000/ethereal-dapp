@@ -4,7 +4,7 @@ import sun from "../assets/sun.svg";
 const DashboardHeader = () => {
   function changeDarkMode() {}
   return (
-    <div className="h-[12%] px-4 sm:px-2 border-b-[1px] border-rgba-11 flex justify-between items-center">
+    <div className="h-[12%] sm:h-[10%] px-4 sm:px-2 border-b-[1px] border-rgba-11 flex justify-between items-center">
       <img src={logo} alt="logo" className=" sm:w-40" />
       <div className="flex gap-6 sm:gap-3 items-center">
         <img

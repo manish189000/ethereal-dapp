@@ -11,4 +11,7 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 100px;
+  }
 }
