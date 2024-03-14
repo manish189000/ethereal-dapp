@@ -59,7 +59,7 @@ import threedot from "../assets/row01.svg";
 import arrow from "../assets/Arrow.svg";
 const WithdrawStatement = ({ nodeImage, nodeName }) => {
   return (
-    <div className="px-4 py-4 my-2 w-full border-2 border-gray-900 flex justify-between items-center">
+    <div className="px-4 py-4 my-2 w-full min-w-[1060px] border-2 border-gray-900 flex justify-between items-center">
       <div className="flex items-center gap-2 w-[25%]">
         <img src={nodeImage} className="w-8" />
         <p className=" font-lw text-sm">{nodeName}</p>

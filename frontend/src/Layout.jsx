@@ -3,16 +3,21 @@ import DashboardHeader from "./components/DashboardHeader";
 import Sidebar from "./components/Sidebar";
 import cube from "../src/assets/cube.svg";
 import { RiMenu2Line } from "react-icons/ri";
+import ResponsiveSidebar from "./components/ResponsiveSidebar";
+import { useState } from "react";
 
 const Layout = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
   return (
     <div className="h-dvh bg-black w-full relative overflow-hidden">
       <DashboardHeader />
       <div className="w-full z-[1000] relative flex xl:block h-[88%]">
         <Sidebar />
-        <div className=" hidden xl:block text-2xl px-16 py-4">
-          <RiMenu2Line />
+        <div className=" hidden xl:block text-2xl px-4 py-4">
+          <RiMenu2Line onClick={() => setShowNavbar(!showNavbar)} />
         </div>
+        <ResponsiveSidebar showNavbar={showNavbar} />
+
         <div className="w-[85%] xl:w-full h-full overflow-y-scroll px-16 py-6 xl:pt-0 no-scrollbar">
           <Outlet />
         </div>
