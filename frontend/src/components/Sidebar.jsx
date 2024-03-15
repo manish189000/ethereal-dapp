@@ -5,14 +5,34 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { RiAdminFill } from "react-icons/ri";
 import { IoSettings } from "react-icons/io5";
 import { FaMoneyBill } from "react-icons/fa";
+import { useState } from "react";
+import { BsArrowLeftShort } from "react-icons/bs";
 
 const Sidebar = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <>
       {/* ---------------------------------------------------------- */}
 
-      <div className="w-[15%] xl:hidden z-50 h-full bg-[#08090A] flex flex-col justify-between py-3">
-        <div className="w-full flex flex-col ">
+      <div
+        className={`${
+          open ? "w-[80px]" : "w-[230px]"
+        } duration-100 z-50 h-full bg-[#08090A] flex flex-col justify-between py-3 relative`}
+      >
+        {/* xl:hidden  */}
+        <div
+          className="bg-black z-50 text-white text-3xl rounded-full absolute -right-3 top-9"
+          onClick={() => setOpen(!open)}
+        >
+          <BsArrowLeftShort
+            className={`bg-black rounded-full border-oliv cursor-pointer ${
+              !open && "rotate-180"
+            }`}
+            onClick={() => setOpen(!open)}
+          />
+        </div>
+        <div className="w-full overflow-y-scroll no-scrollbar h-[95%] flex flex-col ">
           <NavLink
             to={"admin"}
             className={({ isActive }) =>
@@ -22,9 +42,10 @@ const Sidebar = () => {
             }
             end
           >
-            <RiAdminFill className=" text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
-            <span className="text-[#0BFFFF] font-lw">ADMIN</span>
+            <RiAdminFill className=" min-w-8  text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
+            <span className="text-[#0BFFFF] font-lw">{open || "ADMIN"}</span>
           </NavLink>
+
           <NavLink
             to={"nodez"}
             className={({ isActive }) =>
@@ -34,8 +55,8 @@ const Sidebar = () => {
             }
             end
           >
-            <img src={node_icon} className="text-xl" />
-            <span className="text-[#0BFFFF] font-lw">NODEZ </span>
+            <img src={node_icon} className=" min-w-8  text-xl" />
+            <span className="text-[#0BFFFF] font-lw">{open || "NODEZ"}</span>
           </NavLink>
           <NavLink
             to={"config"}
@@ -46,8 +67,8 @@ const Sidebar = () => {
             }
             end
           >
-            <IoSettings className=" text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
-            <span className="text-[#0BFFFF] font-lw">CONFIG</span>
+            <IoSettings className=" min-w-8   text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
+            <span className="text-[#0BFFFF] font-lw">{open || "CONFIG"}</span>
           </NavLink>
           <NavLink
             to={"approve-withdrawal"}
@@ -58,8 +79,10 @@ const Sidebar = () => {
             }
             end
           >
-            <FaMoneyBill className=" text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
-            <span className="text-[#0BFFFF] font-lw">APPROVE WITHDRAWAL</span>
+            <FaMoneyBill className=" min-w-8   text-[33px] rounded-md p-2 bg-[#093c3d] text-[#0BFFFF]" />
+            <span className="text-[#0BFFFF] font-lw">
+              {open || "APPROVE WITHDRAWAL"}
+            </span>
           </NavLink>
           <NavLink
             to={"dashboard"}
@@ -70,8 +93,10 @@ const Sidebar = () => {
             }
             end
           >
-            <img src={db_icon} className="text-xl" />
-            <span className="text-[#0BFFFF] font-lw">DASHBOARD</span>
+            <img src={db_icon} className=" min-w-8  text-xl" />
+            <span className="text-[#0BFFFF] font-lw">
+              {open || "DASHBOARD"}
+            </span>
           </NavLink>
           <NavLink
             to={"node"}
@@ -82,8 +107,8 @@ const Sidebar = () => {
             }
             end
           >
-            <img src={node_icon} className="text-xl" />
-            <span className="text-[#0BFFFF] font-lw">NODE</span>
+            <img src={node_icon} className=" min-w-8  text-xl" />
+            <span className="text-[#0BFFFF] font-lw">{open || "NODE"}</span>
           </NavLink>
           <NavLink
             to={"withdraw"}
@@ -95,6 +120,7 @@ const Sidebar = () => {
             end
           >
             <svg
+              className="  min-w-8"
               width="32"
               height="32"
               viewBox="0 0 32 32"
@@ -143,12 +169,12 @@ const Sidebar = () => {
               </g>
             </svg>
 
-            <span className="text-[#0BFFFF] font-lw">WITHDRAW</span>
+            <span className="text-[#0BFFFF] font-lw">{open || "WITHDRAW"}</span>
           </NavLink>
         </div>
-        <div className="flex gap-3 items-center justify-center my-4 cursor-pointer opacity-30 hover:opacity-100 ">
+        <div className="flex h-[5%] gap-3 items-center justify-center my-3 py-3 cursor-pointer opacity-30 hover:opacity-100 ">
           <IoLogOutOutline className=" text-2xl text-[#0BFFFF]" />
-          <p className=" text-[#0BFFFF] font-openSans">Logout</p>
+          <p className=" text-[#0BFFFF] font-lw">{open || "Logout"}</p>
         </div>
       </div>
     </>

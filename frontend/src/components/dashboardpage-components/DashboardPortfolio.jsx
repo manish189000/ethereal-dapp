@@ -64,7 +64,7 @@ const DashboardPortfolio = () => {
                 "linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)",
               borderImageSlice: 1,
             }}
-            className="flex lg2:flex-col lg2:gap-3 w-[90%] border-2 p-2 my-2 items-center justify-between"
+            className="flex xl:flex-col lg2:gap-3 w-[90%] border-2 p-2 my-2 items-center justify-between"
           >
             <div className="flex gap-3">
               <p className=" font-lw text-[14px]">$3000</p>
