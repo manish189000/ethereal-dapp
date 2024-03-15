@@ -50,7 +50,7 @@ const WithdrawPage = () => {
             Earnings
           </div>
         </div>
-        <div className=" py-4 w-full overflow-x-scroll">
+        <div className=" py-4 w-full  xl:overflow-x-scroll  2xl:overflow-hidden "> 
           {nodeObject.map((item) => {
             return (
               <WithdrawStatement
