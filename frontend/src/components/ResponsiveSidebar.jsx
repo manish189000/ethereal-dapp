@@ -12,7 +12,7 @@ const ResponsiveSidebar = ({ showNavbar, setShowNavbar }) => {
       <div className="responsiveContainer ">
         <div
           onClick={() => setShowNavbar(!showNavbar)}
-          className="innercontainer w-full bg-black absolute z-[1000]"
+          className="innercontainer w-full overflow-y-scroll no-scrollbar h-[90%] bg-black absolute z-[1000] "
         >
           <NavLink
             to={"admin"}
