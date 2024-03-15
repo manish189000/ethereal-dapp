@@ -17,7 +17,7 @@ const Sidebar = () => {
 
       <div
         className={`${
-          open ? "w-[80px]" : "w-[230px]"
+          open ? "w-[80px]" : "w-[275px]"
         } duration-100 lg2:hidden z-50 h-full bg-[#08090A] flex flex-col justify-between py-3 relative`}
       >
         <div
@@ -92,7 +92,7 @@ const Sidebar = () => {
             }
             end
           >
-            <img src={db_icon} className=" min-w-8  text-xl" />
+            <img src={db_icon} className="min-w-8  text-xl" />
             <span className="text-[#0BFFFF] font-lw">
               {open || "DASHBOARD"}
             </span>

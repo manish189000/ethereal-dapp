@@ -20,7 +20,7 @@ const Layout = () => {
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
         />
-        <div className=" flex-auto lg2:w-full lg2:h-[90%] h-full overflow-y-scroll px-16 air:px-4 pt-24 pb-6 lg2:pt-6 no-scrollbar">
+        <div className=" w-full lg2:w-full lg2:h-[90%] h-full overflow-y-scroll px-16 air:px-4 pt-24 pb-6 lg2:pt-6 no-scrollbar">
           <Outlet />
         </div>
       </div>
