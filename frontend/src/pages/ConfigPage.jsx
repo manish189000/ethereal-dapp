@@ -49,6 +49,11 @@ const ConfigPage = () => {
             </div>
           </div>
         </section>
+        <div className="plus-container w-[100%] flex pt-9 sm:pt-0 justify-start">
+          <div class=" bg-gradient-to-r from-rgba-254 px-6 to-rgba-11 text-black p-3 font-lw">
+            SUBMIT
+          </div>
+        </div>
       </div>
     </div>
   );
