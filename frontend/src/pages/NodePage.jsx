@@ -193,17 +193,17 @@ const NodePage = () => {
             "linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)",
           borderImageSlice: 1,
         }}
-        className=" mt-4 px-14 py-8"
+        className=" mt-4 px-14 air:px-4 py-8 bg-opacity-50 backdrop-blur-sm"
       >
-        <div className="text-item flex  w-[100%] ">
-          <div className="name-text text-[#292D32] w-[20%] text-center font-lw font-[700] ">
-            Name
-          </div>
-          <div className="miningtext text-[#292D32] w-[45%] text-center font-lw font-[700]">
-            Mining Rate
-          </div>
-        </div>
         <div className="py-4 my-2 w-full overflow-x-scroll">
+          <div className="text-item flex  w-[100%] ">
+            <div className="name-text text-[#292D32] w-[20%] text-center font-lw font-[700] ">
+              Name
+            </div>
+            <div className="miningtext text-[#292D32] w-[45%] text-center font-lw font-[700]">
+              Mining Rate
+            </div>
+          </div>
           {nodeObject.map((item) => {
             return (
               <NodeStatement
