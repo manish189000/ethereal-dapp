@@ -9,7 +9,7 @@ import { RiAdminFill } from "react-icons/ri";
 const ResponsiveSidebar = ({ showNavbar, setShowNavbar }) => {
   return (
     showNavbar && (
-      <div className="responsiveContainer ">
+      <div className="responsiveContainer hidden lg2:block">
         <div
           onClick={() => setShowNavbar(!showNavbar)}
           className="innercontainer w-full overflow-y-scroll no-scrollbar h-[90%] bg-black absolute z-[1000] "
