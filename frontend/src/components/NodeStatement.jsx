@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import threedot from "../assets/row01.svg";
 import arrow from "../assets/Arrow.svg";
 

@@ -115,7 +115,7 @@ const DashboardPage = () => {
             className="h-full w-full"
           >
             <div className="cntnt flex justify-between">
-              <div className="inportcntnt w-[75%]">
+              <div className="inportcntnt w-[75%] md:w-full">
                 <div className="upContent bg-[#121212] h-[80%] p-2">
                   <p className="text-rgba-254 text-[12px] font-openSans">
                     ポートフォリオ
@@ -128,7 +128,7 @@ const DashboardPage = () => {
                   </p>
                 </div>
               </div>
-              <div className="inportcntnt2 w-[25%]">
+              <div className="inportcntnt2 md:hidden w-[25%]">
                 <div className="upContent bg-[#121212] h-[80%] p-2">
                   <p className="text-rgba-254 text-[12px] font-openSans">
                     ノードのアクティブ化

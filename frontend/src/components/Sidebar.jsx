@@ -25,7 +25,13 @@ const Sidebar = () => {
           onClick={() => setOpen(!open)}
         >
           <BsArrowLeftShort
-            className={`bg-black rounded-full border-oliv cursor-pointer ${
+            // style={{
+            //   border: "1px solid",
+            //   borderImageSource:
+            //     "linear-gradient(212.97deg, #0BFFFF 8.98%, #FE1BF1 80.33%)",
+            //   borderImageSlice: 1,
+            // }}
+            className={`bg-[#CB6CE6] rounded-full border-oliv cursor-pointer ${
               !open && "rotate-180"
             }`}
             onClick={() => setOpen(!open)}

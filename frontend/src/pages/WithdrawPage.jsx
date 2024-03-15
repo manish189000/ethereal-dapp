@@ -43,7 +43,7 @@ const WithdrawPage = () => {
         className=" mt-4 px-14 air:px-4 py-8 bg-opacity-50 backdrop-blur-sm"
       >
         {/* // <<<<<<< changes */}
-        <div className=" py-4 w-full overflow-x-scroll">
+        <div className=" py-4 w-full overflow-x-scroll custom-scrollbar">
           <div className="text-item flex w-[100%] ">
             <div className="name-text text-[#292D32] w-[20%] lg2:w-[25%] min-w-[191px] text-center font-lw font-[700] ">
               Name
