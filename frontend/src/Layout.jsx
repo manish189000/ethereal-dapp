@@ -11,20 +11,16 @@ const Layout = () => {
   return (
     <div className="h-dvh bg-black w-full relative overflow-hidden">
       <DashboardHeader />
-      <div className="w-full z-[1000] relative flex  h-[88%] sm:h-[90%]">
-        {/* xl:block */}
+      <div className="w-full z-[1000] relative flex lg2:block h-[88%] sm:h-[90%]">
         <Sidebar />
-        <div className=" hidden text-2xl px-16 air:px-4 py-4 h-[10%]">
-          {/* xl:block  */}
+        <div className=" hidden lg2:block text-2xl px-16 air:px-4 py-4 h-[10%]">
           <RiMenu2Line onClick={() => setShowNavbar(!showNavbar)} />
         </div>
         <ResponsiveSidebar
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
         />
-        <div className=" flex-auto xl:w-full  h-full overflow-y-scroll px-16 air:px-4 pt-24 pb-6 no-scrollbar">
-          {/* xl:h-[90%] */}
-          {/* xl:pt-0 */}
+        <div className=" flex-auto lg2:w-full lg2:h-[90%] h-full overflow-y-scroll px-16 air:px-4 pt-24 pb-6 lg2:pt-6 no-scrollbar">
           <Outlet />
         </div>
       </div>

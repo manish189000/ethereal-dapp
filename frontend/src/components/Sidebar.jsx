@@ -18,9 +18,8 @@ const Sidebar = () => {
       <div
         className={`${
           open ? "w-[80px]" : "w-[230px]"
-        } duration-100 z-50 h-full bg-[#08090A] flex flex-col justify-between py-3 relative`}
+        } duration-100 lg2:hidden z-50 h-full bg-[#08090A] flex flex-col justify-between py-3 relative`}
       >
-        {/* xl:hidden  */}
         <div
           className="bg-black z-50 text-white text-3xl rounded-full absolute -right-3 top-9"
           onClick={() => setOpen(!open)}
