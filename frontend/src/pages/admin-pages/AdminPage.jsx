@@ -1,5 +1,12 @@
+import UserBalance from "../../components/UserBalance";
+
 const AdminPage = () => {
-  return <div>AdminPage</div>;
+  return (
+    <>
+      <UserBalance />
+      <div className="container mt-14 "></div>
+    </>
+  );
 };
 
 export default AdminPage;
