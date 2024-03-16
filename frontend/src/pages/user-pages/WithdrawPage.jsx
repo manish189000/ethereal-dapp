@@ -1,13 +1,13 @@
-import UserBalance from "../components/UserBalance";
-import withdraw_icon from "../assets/withdraw_icon.svg";
-import WithdrawStatement from "../components/WithdrawStatement";
-import { nodeObject } from "../util/data";
+import UserBalance from "../../components/UserBalance";
+import withdraw_icon from "../../assets/withdraw_icon.svg";
+import WithdrawStatement from "../../components/WithdrawStatement";
+import { nodeObject } from "../../util/data";
 
 const WithdrawPage = () => {
   return (
     <>
       <UserBalance />
-      <div className="mt-14">
+      <div className="mt-28">
         <div className=" flex h-16 gap-2 w-full">
           <img src={withdraw_icon} alt="wicon" className="bg-rgba-254 p-2" />
           <div
@@ -20,7 +20,7 @@ const WithdrawPage = () => {
             className="h-full w-full"
           >
             <div className="bg-[#121212] h-[80%] p-2">
-              <p className="text-rgba-254 text-[12px] font-openSans">
+              <p className="hidden text-rgba-254 text-[12px] font-openSans">
                 ツイッタープラットフォーム
               </p>
               <p className="text-white text-sm font-lw "> PENDING WITHDRAWS</p>

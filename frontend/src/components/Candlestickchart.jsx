@@ -82,7 +82,8 @@ class CandlestickChart extends React.Component {
           options={this.state.options}
           series={this.state.series}
           type="candlestick"
-          height={350}
+          height={340}
+
           //   width={400}
         />
       </div>
