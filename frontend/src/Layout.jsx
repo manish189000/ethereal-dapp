@@ -5,12 +5,14 @@ import cube from "../src/assets/cube.svg";
 import { RiMenu2Line } from "react-icons/ri";
 import ResponsiveSidebar from "./components/ResponsiveSidebar";
 import { useState } from "react";
+// import WalletConnect from "./componen/ts/metamask-components/WalletConnect";
 
 const Layout = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
     <div className="h-dvh bg-black w-full relative overflow-hidden">
+      {/* <WalletConnect /> */}
       <DashboardHeader />
       <div className="w-full z-[1000] relative flex lg2:block h-[88%] sm:h-[90%]">
         <Sidebar />

@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 // import { useLoaderData } from "react-router-dom";
+import { useContext } from "react";
 import polygon from "../assets/Polygon 1.svg";
+import MainContext from "../store/MainContext";
 
-const Balance = ({ title, icon }) => {
+const Balance = ({ title, icon, balance }) => {
+  const { walletBalance } = useContext(MainContext);
   // console.log(window.location.pathname);
   const pathname = window.location.pathname;
   let role;
@@ -31,7 +34,9 @@ const Balance = ({ title, icon }) => {
       </div>
       <div className="downcontainer flex justify-between">
         <div className="dleft">
-          <div className="real font-lw text-2xl font-bold">0 REAL</div>
+          <div className="real font-lw text-2xl font-bold">
+            {balance || "NULL"} ETH
+          </div>
           <div className="real2 font-lw text-sm">0 REAL</div>
         </div>
         <div className="dright">

@@ -1,6 +1,5 @@
 import UserBalance from "../../components/UserBalance";
-import { TiTick } from "react-icons/ti";
-import { RxCross2 } from "react-icons/rx";
+
 import ApproveWithdrawStatement from "../../components/ApproveWithdrawStatement";
 
 const ApproveWithdrawalPage = () => {
@@ -53,6 +52,7 @@ const ApproveWithdrawalPage = () => {
             {data.map((item) => {
               return (
                 <ApproveWithdrawStatement
+                  key={item.id}
                   sr={item.id}
                   account={item.sender}
                   amount={item.amount}

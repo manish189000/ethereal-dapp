@@ -161,7 +161,23 @@ const NodezPage = () => {
   const handleEdit = (index) => {
     setEditingIndex(index);
   };
-
+      <div className="node-container mt-14 ">
+        <div className="plus-container w-[100%] flex justify-end">
+          <div className=" bg-gradient-to-r from-rgba-254 to-rgba-11 text-black p-3 rounded-full ">
+            <FaPlus />
+          </div>
+        </div>
+        <div className="button-part flex w-[100%] justify-between pt-4">
+          <div className="px-6 py-3 border border-[#141414] w-[30%] text-center font-lw font-medium bg-black">
+            Node
+          </div>
+          <div className="px-6 py-3 border border-[#141414] w-[30%] text-center font-lw font-medium bg-black">
+            R/D
+          </div>
+          <div className="px-6 py-3 border border-[#141414] w-[30%] text-center font-lw font-medium bg-black">
+            Day
+          </div>
+        </div>
   const handleSave = (index) => {
     setEditingIndex(null);
     // You can update state here or call an API to save the changes
