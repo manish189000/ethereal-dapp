@@ -26,7 +26,7 @@ const ConfigPage = () => {
               }}
             />
           </section>
-          <section className=" flex gap-20 air:gap-4 items-center  air:flex-col air:items-start">
+          <section className=" flex gap-20 air:gap-4 items-start air:flex-col air:items-start">
             <p className=" font-lw text-base">Bot wallet:</p>
             <div className="flex gap-5 ">
               <div className="flex air:order-1 flex-col gap-3">
