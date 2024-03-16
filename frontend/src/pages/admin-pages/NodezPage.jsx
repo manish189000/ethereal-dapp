@@ -180,7 +180,7 @@ const NodezPage = () => {
   return (
     <>
       <UserBalance />
-      <div className=" w-[100%] max-w-screen-xl">
+      <div className=" w-[100%] max-w-screen-xl backdrop-blur-sm">
         <div className=" mt-24 flex justify-between items-start md:flex"></div>
         <div className="mt-12 shadow-sm border-2 border-gray-900 overflow-x-auto custom-scrollbar">
           <table className="w-full table-auto text-sm text-left">
