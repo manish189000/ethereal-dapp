@@ -139,18 +139,17 @@
 //   );
 // };
 // export default NodePage;
-import React from "react";
-import UserBalance from "../components/UserBalance";
-import nodez from "../assets/nodez.svg";
-import NodeStatement from "../components/NodeStatement";
-import { nodeObject } from "../util/data";
+import UserBalance from "../../components/UserBalance";
+import nodez from "../../assets/nodez.svg";
+import NodeStatement from "../../components/NodeStatement";
+import { nodeObject } from "../../util/data";
 
 const NodePage = () => {
   return (
     <>
       <UserBalance />
       <div className="nodeContainer">
-        <div className="inSection1 mt-14 flex h-16 gap-3 w-full">
+        <div className="inSection1 mt-28 flex h-16 gap-3 w-full">
           <img src={nodez} alt="nodez" className="bg-rgba-254 py-2 px-3" />
           <div
             style={{
@@ -160,10 +159,10 @@ const NodePage = () => {
             }}
             className="h-full w-full"
           >
-            <div className="cntnt flex justify-between">
+            <div className="cntnt h-full flex justify-between">
               <div className="inportcntnt w-full">
                 <div className="upContent bg-[#121212] h-[80%] p-2">
-                  <p className="text-rgba-254 text-[12px] font-openSans">
+                  <p className="hidden text-rgba-254 text-[12px] font-openSans">
                     保留中の引き出し
                   </p>
                   <p className="text-white text-sm font-lw ">NODE</p>

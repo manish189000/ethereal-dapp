@@ -1,7 +1,18 @@
 /* eslint-disable react/prop-types */
+// import { useLoaderData } from "react-router-dom";
 import polygon from "../assets/Polygon 1.svg";
 
 const Balance = ({ title, icon }) => {
+  // console.log(window.location.pathname);
+  const pathname = window.location.pathname;
+  let role;
+  if (pathname.startsWith("/admin")) {
+    console.log("admin");
+    role = "admin";
+  } else if (pathname.startsWith("/user")) {
+    console.log("user");
+    role = "user";
+  }
   return (
     <div
       className="threebox w-[30%] air:w-full h-32 flex flex-col justify-between p-3 bg-opacity-50 backdrop-blur-sm z-10"
@@ -24,7 +35,15 @@ const Balance = ({ title, icon }) => {
           <div className="real2 font-lw text-sm">0 REAL</div>
         </div>
         <div className="dright">
-          <img src={icon} />
+          {role === "user" ? (
+            <img src={icon} />
+          ) : (
+            <button
+              className={`button-part px-4 py-2 text-[12px] lg2:w-full font-semibold border-black border-2 bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-500  rounded-[2rem] text-[white] font-poppins`}
+            >
+              Buy more
+            </button>
+          )}
         </div>
       </div>
     </div>

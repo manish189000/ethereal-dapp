@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { IoMdAddCircle } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const ConfigPage = () => {
   const [botWalletInputFields, setBotWalletInputFields] = useState(1);

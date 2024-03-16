@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const Layout = () => {
   const [showNavbar, setShowNavbar] = useState(false);
+
   return (
     <div className="h-dvh bg-black w-full relative overflow-hidden">
       <DashboardHeader />
@@ -41,3 +42,10 @@ const Layout = () => {
 };
 
 export default Layout;
+
+export function loader({ request }) {
+  const url = new URL(request.url);
+  // console.log("Loader", url);
+  // const searchTerm = url.searchParams.get("q");
+  return url.pathname;
+}
