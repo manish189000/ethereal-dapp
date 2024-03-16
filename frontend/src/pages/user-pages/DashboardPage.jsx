@@ -7,13 +7,37 @@ import { nodeObject } from "../../util/data";
 import CandlestickChart from "../../components/Candlestickchart";
 import DashboardPortfolio from "../../components/dashboardpage-components/DashboardPortfolio";
 import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
+import { useContext } from "react";
+import MainContext from "../../store/MainContext";
 
 const DashboardPage = () => {
+  // const [walletBalance, setWalletBalance] = useState("");
+  const { walletBalance } = useContext(MainContext);
+  // async function connectToMetaMask() {
+  //   try {
+  //     if (typeof window.ethereum !== "undefined") {
+  //       // Get the current Ethereum wallet address
+  //       const accounts = await window.ethereum.request({
+  //         method: "eth_requestAccounts",
+  //       });
+  //       // Get the wallet balance for the current account
+  //       const balance = await window.ethereum.request({
+  //         method: "eth_getBalance",
+  //         params: [accounts[0]], // Pass the current account as the parameter
+  //       });
+  //       console.log("balance", balance);
+  //       setWalletBalance(balance);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching wallet token:", error);
+  //   }
+  // }
   const loader = useLoaderData();
   console.log(loader);
   return (
     <div>
-      <UserBalance />
+      <UserBalance balance={walletBalance} />
       <div className=" mt-28 air:mt-20 flex air:flex-col justify-between gap-4 w-full">
         <div className="flex flex-col w-[30%] air:w-full">
           <div className=" flex h-16 gap-2 w-full">

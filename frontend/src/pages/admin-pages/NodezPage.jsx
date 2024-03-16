@@ -8,7 +8,7 @@ const NodezPage = () => {
 
       <div className="node-container mt-14 ">
         <div className="plus-container w-[100%] flex justify-end">
-          <div class=" bg-gradient-to-r from-rgba-254 to-rgba-11 text-black p-3 rounded-full ">
+          <div className=" bg-gradient-to-r from-rgba-254 to-rgba-11 text-black p-3 rounded-full ">
             <FaPlus />
           </div>
         </div>
@@ -114,7 +114,7 @@ const NodezPage = () => {
         </div>
       </div> */}
         <div className="plus-container w-[100%] flex pt-9 justify-end">
-          <div class=" bg-gradient-to-r from-rgba-254 px-6 to-rgba-11 text-black p-3 font-lw">
+          <div className=" bg-gradient-to-r from-rgba-254 px-6 to-rgba-11 text-black p-3 font-lw">
             SUBMIT
           </div>
         </div>

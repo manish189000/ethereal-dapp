@@ -10,6 +10,7 @@ import AdminPage from "./pages/admin-pages/AdminPage";
 import ApproveWithdrawalPage from "./pages/admin-pages/ApproveWithdrawalPage";
 import NodezPage from "./pages/admin-pages/NodezPage";
 import ConfigPage from "./pages/admin-pages/ConfigPage";
+import { MainContextProvider } from "./store/MainContext";
 const App = () => {
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
@@ -35,7 +36,11 @@ const App = () => {
       loader: loader,
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <MainContextProvider>
+      <RouterProvider router={router} />
+    </MainContextProvider>
+  );
 };
 
 export default App;
