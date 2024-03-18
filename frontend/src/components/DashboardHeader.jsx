@@ -6,33 +6,41 @@ import MainContext from "../store/MainContext";
 import Web3 from "web3";
 const DashboardHeader = () => {
   function changeDarkMode() {}
-  const { setWalletBalance } = useContext(MainContext);
+  const { setWalletBalance, accountAddress, setAccountAddress } =
+    useContext(MainContext);
+  console.log("account address:", accountAddress);
   async function connectToMetaMask() {
     try {
       if (typeof window.ethereum !== "undefined") {
-        // Create a new Web3 instance
         const web3 = new Web3(window.ethereum);
 
-        try {
-          // Request account access if needed
-          await window.ethereum.enable();
+        // Request account access if needed
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
 
-          // Get the user's accounts
-          const accounts = await web3.eth.getAccounts();
+        // Get the user's account address
+        const userAddress = accounts[0];
+        setAccountAddress(userAddress);
+        const request = await fetch("http://localhost:3000/api/v1/users", {
+          method: "POST",
+          body: JSON.stringify({ id: userAddress }),
+          headers: {
+            "Content-type": "application/json",
+          },
+        });
+        const response = await request.json();
+        console.log(response);
+        // Get the account balance
+        const accountBalance = await web3.eth.getBalance(userAddress);
 
-          // Get the account balance
-          const accountBalance = await web3.eth.getBalance(accounts[0]);
-
-          // Set the balance state
-          setWalletBalance(web3.utils.fromWei(accountBalance, "ether"));
-        } catch (error) {
-          console.error(error);
-        }
+        // Set the balance and account address states
+        setWalletBalance(web3.utils.fromWei(accountBalance, "ether"));
       } else {
         console.error("MetaMask is not installed");
       }
     } catch (error) {
-      console.error("Error fetching wallet token:", error);
+      console.error("Error fetching account data:", error);
     }
   }
   return (
@@ -44,13 +52,19 @@ const DashboardHeader = () => {
           src={sun}
           className=" w-6 sm:w-5 cursor-pointer"
         />
-        <button
-          onClick={connectToMetaMask}
-          className="bg-gradient-to-r from-rgba-254 to-rgba-11 text-black sm:text-sm py-3 sm:py-2 px-6 sm:px-3 font-bakbak flex items-center gap-3"
-        >
-          <img src={connect} alt="connect" className=" sm:w-4" />
-          CONNECT
-        </button>
+        {accountAddress ? (
+          <p className=" sm:w-28 sm:overflow-hidden sm:truncate">
+            {accountAddress}
+          </p>
+        ) : (
+          <button
+            onClick={connectToMetaMask}
+            className="bg-gradient-to-r from-rgba-254 to-rgba-11 text-black sm:text-sm py-3 sm:py-2 px-6 sm:px-3 font-bakbak flex items-center gap-3"
+          >
+            <img src={connect} alt="connect" className=" sm:w-4" />
+            CONNECT
+          </button>
+        )}
       </div>
     </div>
   );

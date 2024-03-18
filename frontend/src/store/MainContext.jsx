@@ -1,53 +1,79 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from "react";
-import { useState } from "react";
-import { createContext } from "react";
+import { useEffect, useRef } from "react";
+import { useState, createContext } from "react";
 import Web3 from "web3";
 
-// const MainContext = () => {
-//   return (
-//     <div>MainContext</div>
-//   )
-// }
 const MainContext = createContext({
   walletBalance: null,
   setWalletBalance: () => {},
+  accountAddress: null,
+  setAccountAddress: () => {},
 });
+
 export default MainContext;
 
 export const MainContextProvider = ({ children }) => {
   const [walletBalance, setWalletBalance] = useState("");
+  const [accountAddress, setAccountAddress] = useState("");
+  const isMounted = useRef(false); // Ref to track component mount status
+
   useEffect(() => {
-    const getAccountBalance = async () => {
-      // Check if MetaMask is installed
-      if (typeof window.ethereum !== "undefined") {
-        // Create a new Web3 instance
-        const web3 = new Web3(window.ethereum);
+    if (!isMounted.current) {
+      // Component is mounting for the first time
+      isMounted.current = true;
+      return; // Skip the effect on initial mount
+    }
 
-        try {
+    const getAccountData = async () => {
+      try {
+        if (typeof window.ethereum !== "undefined") {
+          const web3 = new Web3(window.ethereum);
+
           // Request account access if needed
-          await window.ethereum.enable();
+          const accounts = await window.ethereum.request({
+            method: "eth_requestAccounts",
+          });
 
-          // Get the user's accounts
-          const accounts = await web3.eth.getAccounts();
+          // Get the user's account address
+          const userAddress = accounts[0];
+          setAccountAddress(userAddress);
+
+          // Fetch user data only after setting the account address
+          const request = await fetch("http://localhost:3000/api/v1/users", {
+            method: "POST",
+            body: JSON.stringify({ id: userAddress }),
+            headers: {
+              "Content-type": "application/json",
+            },
+          });
+          const response = await request.json();
+          console.log(response);
 
           // Get the account balance
-          const accountBalance = await web3.eth.getBalance(accounts[0]);
+          const accountBalance = await web3.eth.getBalance(userAddress);
 
-          // Set the balance state
+          // Set the balance and account address states
           setWalletBalance(web3.utils.fromWei(accountBalance, "ether"));
-        } catch (error) {
-          console.error(error);
+        } else {
+          console.error("MetaMask is not installed");
         }
-      } else {
-        console.error("MetaMask is not installed");
+      } catch (error) {
+        console.error("Error fetching account data:", error);
       }
     };
 
-    getAccountBalance();
+    getAccountData();
   }, []);
+
   return (
-    <MainContext.Provider value={{ walletBalance, setWalletBalance }}>
+    <MainContext.Provider
+      value={{
+        walletBalance,
+        setWalletBalance,
+        accountAddress,
+        setAccountAddress,
+      }}
+    >
       {children}
     </MainContext.Provider>
   );
