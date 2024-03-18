@@ -1,0 +1,12 @@
+# Ignore compiled binaries
+*.exe
+*.o
+
+# Ignore log files
+*.log
+
+# Ignore files in a specific directory
+/build/
+
+# Ignore a specific file
+creds.json
