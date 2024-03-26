@@ -18,7 +18,7 @@ const Balance = ({ title, icon, balance }) => {
   }
   return (
     <div
-      className="threebox w-[30%] air:w-full h-32 flex flex-col justify-between p-3 bg-opacity-50 backdrop-blur-sm z-10"
+      className="threebox w-[23%] air:w-full h-[10rem] flex flex-col justify-between p-3 bg-opacity-50 backdrop-blur-sm z-10"
       style={{
         border: "1px solid",
         borderImageSource:
@@ -28,9 +28,9 @@ const Balance = ({ title, icon, balance }) => {
     >
       <div className="uppContainer flex justify-between">
         <div className="availableBal text-sm font-lw">{title}</div>
-        <button className="flex gap-1 items-center font-poppins bg-gradient-to-r from-blue-400 to-purple-600  py-1 px-2 air:px-4 air:py-2 rounded-2xl text-xs air:text-sm font-bold">
+        {/* <button className="flex gap-1 items-center font-poppins bg-gradient-to-r from-blue-400 to-purple-600  py-1 px-2 air:px-4 air:py-2 rounded-2xl text-xs air:text-sm font-bold">
           $USDT <img src={polygon} />
-        </button>
+        </button> */}
       </div>
       <div className="downcontainer flex justify-between">
         <div className="dleft">

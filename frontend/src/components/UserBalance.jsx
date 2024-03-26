@@ -1,3 +1,5 @@
+import { MdGeneratingTokens } from "react-icons/md";
+
 import { useContext } from "react";
 import icon1 from "../assets/Group 48095668.svg";
 import icon2 from "../assets/Group 48095669.svg";
@@ -11,14 +13,17 @@ const UserBalance = () => {
   return (
     <div className="mainContainer w-full flex items-center justify-between relative ">
       <img src={bgsvg} className="absolute z-0 w-[120%] air:hidden" />
-      <div className="paddingContainer w-full flex air:flex-col air:gap-3 items-center justify-between px-8 air:px-0">
+      <div className="paddingContainer w-full flex air:flex-col air:gap-2 items-center justify-between px-8 air:px-0">
+        <Balance title="AVAILABLE TOKEN" icon={icon1} balance={walletBalance} />
         <Balance
           title="AVAILABLE BALANCE"
           icon={icon1}
           balance={walletBalance}
         />
-        <Balance title="TOTAL EARNINGS" icon={icon2} />
-        <Balance title="DAILY MINING RATE" icon={icon3} />
+        {/* <Balance title="TOTAL EARNINGS" icon={icon2} /> */}
+        <Balance title="TOTAL EARNINGS" />
+        {/* <Balance title="DAILY MINING RATE" icon={icon3} /> */}
+        <Balance title="DAILY MINING RATE" />
       </div>
     </div>
   );
